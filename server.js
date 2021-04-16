@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// require("routes/auth.routes")(app);
+require("./routes/auth.routes")(app);
 
 
 // Route
