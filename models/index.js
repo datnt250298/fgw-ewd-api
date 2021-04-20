@@ -6,8 +6,12 @@ const db = {};
 db.mongoose = mongoose;
 
 const User = require("./user.model")
+const Faculty = require("./faculty.model")
+const Topic = require("./topic.model")
 
 module.exports = {
   db,
-  User
+  User,
+  Faculty,
+  Topic
 };

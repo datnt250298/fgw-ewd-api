@@ -6,5 +6,5 @@ const facultySchema = new Schema({
     topicList: [{type:mongoose.Types.ObjectId}]
 })
 
-const User = mongoose.model("faculties", facultySchema);
-module.exports = User;
+const Faculty = mongoose.model("faculties", facultySchema);
+module.exports = Faculty;

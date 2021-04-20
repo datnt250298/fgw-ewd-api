@@ -4,6 +4,9 @@ const express = require("express");
 const cors = require("cors");
 const dbConnection = require("./dbConnection");
 
+const db = require("./models")
+const {User, Faculty, Topics} = db;
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -26,6 +29,13 @@ function startServer() {
     });
   });
 }
+
+// Create mock db
+// function initDatabase() {
+  // User -> 4 type of users (student, admin, mc, mm)
+  // Faculty -> 3 type of faculties (IT, Design, Business)
+  // Topic -> 3 topics (3 type of due date) of each faculty
+// }
 
 async function init() {
   await dbConnection.connect();
